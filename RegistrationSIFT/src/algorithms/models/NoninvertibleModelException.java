@@ -21,31 +21,22 @@ package algorithms.models;
  *
  * @author Stephan Saalfeld <saalfeld@mpi-cbg.de>
  */
-public class NoninvertibleModelException extends Exception
-{
+public class NoninvertibleModelException extends Exception {
 	private static final long serialVersionUID = 8790171367047404173L;
 
-
-	public NoninvertibleModelException()
-	{
-		super( "Non invertible Model." );
+	public NoninvertibleModelException() {
+		super("Non invertible Model.");
 	}
 
-
-	public NoninvertibleModelException( final String message )
-	{
-		super( message );
+	public NoninvertibleModelException(final String message) {
+		super(message);
 	}
 
-
-	public NoninvertibleModelException( final Throwable cause )
-	{
-		super( cause );
+	public NoninvertibleModelException(final Throwable cause) {
+		super(cause);
 	}
 
-
-	public NoninvertibleModelException( final String message, final Throwable cause )
-	{
-		super( message, cause );
+	public NoninvertibleModelException(final String message, final Throwable cause) {
+		super(message, cause);
 	}
 }

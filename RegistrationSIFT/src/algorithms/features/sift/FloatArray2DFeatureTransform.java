@@ -31,40 +31,39 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-abstract public class FloatArray2DFeatureTransform< P >
-{
+abstract public class FloatArray2DFeatureTransform<P> {
 	final protected P p;
-	
+
 	/**
 	 * Constructor
 	 * 
-	 * @param p parameters
+	 * @param p
+	 *          parameters
 	 */
-	public FloatArray2DFeatureTransform( final P p )
-	{
+	public FloatArray2DFeatureTransform(final P p) {
 		this.p = p;
 	}
-	
-	
+
 	/**
 	 * Initialize the feature transform.
 	 * 
-	 * @param src image having a generating gaussian kernel of initial_sigma
-	 * 	 img must be a 2d-array of float values in range [0.0f, ..., 1.0f]
+	 * @param src
+	 *          image having a generating gaussian kernel of initial_sigma img
+	 *          must be a 2d-array of float values in range [0.0f, ..., 1.0f]
 	 */
-	abstract public void init( final FloatArray2D src );
-	
+	abstract public void init(final FloatArray2D src);
+
 	/**
 	 * Detect features.
 	 * 
-	 * @param features the {@link Collection} to be filled
+	 * @param features
+	 *          the {@link Collection} to be filled
 	 */
-	abstract public void extractFeatures( final Collection< Feature > features );
-	
-	final public List< Feature > extractFeatures()
-	{
-		final List< Feature > features = new ArrayList< Feature >();
-		extractFeatures( features );
+	abstract public void extractFeatures(final Collection<Feature> features);
+
+	final public List<Feature> extractFeatures() {
+		final List<Feature> features = new ArrayList<Feature>();
+		extractFeatures(features);
 		return features;
 	}
 }
